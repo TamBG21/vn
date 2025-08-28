@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta</title>
+    <style>
+        body {
+            background-color: #ffb6c1; /* rosa pastel */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 15%;
+        }
+        h1 {
+            font-size: 50px;
+            color: white;
+            text-shadow: 2px 2px 5px #555;
+        }
+        button {
+            padding: 15px 40px;
+            font-size: 20px;
+            margin: 20px;
+            background-color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #f8a5c2;
+            color: white;
+        }
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>¿Quieres seguir conmigo?</h1>
+    <button onclick="location.href='/si'">Sí</button>
+    <button onclick="location.href='/no'">No</button>
+
+    <!-- Música de fondo -->
+    <audio autoplay loop>
+        <source src="{{ url_for('static', filename='music.mp3') }}" type="audio/mpeg">
+        Tu navegador no soporta el audio.
+    </audio>
+</body>
+</html>
